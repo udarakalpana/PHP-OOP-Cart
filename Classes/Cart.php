@@ -18,6 +18,7 @@ class Cart implements CartInterface
 
     public function getProducts(): array
     {
-
+        $result = $this->dbConnection->query("SELECT * FROM product");
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }

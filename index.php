@@ -55,6 +55,11 @@
 
         }
 
+        $products = $cart->getProducts();
+        foreach ($products as $product) {
+            echo "<li>{$product['product_name']} - \${$product['product_price']} {$product['product_type']}</li>";
+        }
+
     ?>
 
 </body>
